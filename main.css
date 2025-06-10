@@ -9,6 +9,12 @@
     --text-color2: black;
     --bg-color: white;
     --bg-color2: white;
+    --tint: linear-gradient(
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.4),
+        white
+    )
+
 }
 
 html, body {
@@ -48,13 +54,12 @@ html, body {
 }
 
 .tint {
-    height: 100vh;
+    bottom: 0;
+    height: 10%;
     width: 100%;
     position: absolute;
     z-index: -1;
-    background-color: rgba(255, 170, 0, 0.174);
-    /* opacity: .3; */
-    
+    background-image: var(--tint);
 }
 
 .uppercase {
