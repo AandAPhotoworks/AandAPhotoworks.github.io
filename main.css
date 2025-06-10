@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+:root {
+    /* --text-color: #4D3B3B; */
+    /* --bg-color: #FDF5F5; */
+    /* --bg-color2: #f6e7eeba; */
+
+    --text-color: white;
+    --text-color2: black;
+    --bg-color: white;
+    --bg-color2: white;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* img {
+    border: 2px solid black;
+} */
+
+.syne-650 {
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 650;
+    font-style: normal;
+}
+
+.hero {
+    margin-top: 0;
+    height: 100vh;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.bg-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -2;
+    opacity: .6;
+}
+
+.tint {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(255, 170, 0, 0.174);
+    /* opacity: .3; */
+    
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.nav {
+    padding: 2em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 6fr 1fr 1fr;
+}
+
+.right {
+    text-align: center;
+}
+
+.right > * {
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    width: 80%;
+}
+
+.center {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center; */
+    padding: 4rem;
+    font-size: 1.5em;
+}
+
+.mid {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    transform: translateY(50%);
+}
+
+.mid > * {
+    margin: 1.5rem;
+}
+
+.line  {
+    border: 1px, solid, var(--text-color);
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.left {
+    text-align: left;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.button {
+    color: var(--text-color);
+    background-color: rgb(135, 135, 135);
+    border: none;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.button:hover {
+    background-color: black;
+}
+
+.content {
+    background-color: var(--bg-color);
+    gap: 1rem;
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.content > img {
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+}
+
+.content > img:hover {
+    opacity: .5;
+    transition: .5s;
+}
+
+.about {
+    padding: 5rem;
+    padding-bottom: 0;
+}
+
+.about > * {
+    color: var(--text-color2);
+}
+
+    .about img {
+    border-radius: 1rem;
+}
+
+.reviews {
+    padding: 3rem;
+    background-color: var(--bg-color);
+}
+.title {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.wrapper {
+    margin-block: 2rem;
+    margin-inline: 25%;
+    display: flex;
+    gap: 3rem;
+    text-align: center;
+    grid-template-columns: 30% 30%;
+}
+
+.wrapper > * {
+    margin-inline: auto;
+    width: 25%;
+    align-items: center;
+}
+
+.footer {
+    background-color: var(--text-color2);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 3rem;
+}
+
+.footer * {
+    color: var(--bg-color);
+    font-size: 1.3rem;
+    margin: 1rem;
+}
+
+.footer-center p {
+    font-size: 1.1rem;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.5)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
