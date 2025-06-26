@@ -50,7 +50,7 @@ html, body {
     object-fit: cover;
     position: absolute;
     z-index: -2;
-    opacity: .6;
+    opacity: .7;
 }
 
 .tint {
